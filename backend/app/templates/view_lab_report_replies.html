@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Report Replies</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="container">
+        <h1>Lab Report Replies</h1>
+        {% if lab_reports %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Uploaded At</th>
+                        <th>Doctor's Reply</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for report in lab_reports %}
+                        <tr>
+                            <td>{{ report.uploaded_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                            <td>{{ report.doctor_reply if report.doctor_reply else "No reply yet." }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No lab reports found.</p>
+        {% endif %}
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    </div>
+</body>
+</html>

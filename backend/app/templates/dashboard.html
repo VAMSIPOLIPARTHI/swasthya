@@ -1,0 +1,145 @@
+<style>
+    body {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQabIhuDzc0avO6ur9Pg5QWPArjMOHSimZyAg&s');
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 20px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .animate-h1 {
+        animation: moveFromLeft 10s linear infinite;
+        white-space: nowrap;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    @keyframes moveFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    .patient-dashboard {
+        width: 80%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .patient-dashboard ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .patient-dashboard li {
+        margin: 10px 0;
+    }
+
+    .patient-dashboard a {
+        text-decoration: none;
+        color: #4CAF50;
+    }
+
+    .patient-dashboard a:hover {
+        color: #3e8e41;
+    }
+
+    .records-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .records-table th, .records-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .records-table th {
+        background-color: #f2f2f2;
+    }
+
+    .colorful-links {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .colorful-links span {
+        margin-right: 10px;
+    }
+
+    .red {
+        color: #ff0000;
+    }
+
+    .green {
+        color: #00ff00;
+    }
+
+    .blue {
+        color: #0000ff;
+    }
+
+    .yellow {
+        color: #ffff00;
+    }
+
+    .purple {
+        color: #ff00ff;
+    }
+</style>
+
+<img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+
+<h1 class="animate-h1">Welcome to Swasthya - Your Health, Our Priority</h1>
+
+<div class="patient-dashboard">
+    <h2 style="color: #4CAF50;">Welcome, {{ patient.name }}</h2>
+    <ul>
+        <li class="colorful-links"><span class="red">📤</span> <a href="{{ url_for('upload_lab_report') }}">Upload Lab Report</a></li>
+        <li><a href="{{ url_for('video_call') }}">📹 Start a Video Call</a>
+            <li><a href="{{ url_for('medication_search') }}">📹 medication_search/a>   
+        <li class="colorful-links"><span class="green">📥</span> <a href="{{ url_for('view_lab_report_replies') }}">View Lab Report Replies</a></li>
+        <li class="colorful-links"><span class="blue">🩺</span> <a href="{{ url_for('anemia_detection') }}">Anemia Detection</a></li>
+        <li class="colorful-links"><span class="yellow">✂️</span> <a href="{{ url_for('summarize') }}">Summarize Medical Record</a></li>
+        <li class="colorful-links"><span class="purple">🗓️</span> <a href="{{ url_for('appointment') }}">Book Appointment</a></li>
+        <li class="colorful-links"><span class="red">📁</span> <a href="{{ url_for('view_patient_records') }}">View Separate Records Page</a></li>
+        <li class="colorful-links"><span class="green">🚪</span> <a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+
+    <h3 style="color: #4CAF50;" class="colorful-links"><span class="blue">📊</span> Your Records</h3>
+    {% if records|length > 0 %}
+        <table class="records-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Record Type</th>  <th>Description</th> <th>View</th>      </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td>{{ record.date }}</td>        <td>{{ record.record_type }}</td> <td>{{ record.description }}</td> <td><a href="{{ url_for('view_record', record_id=record.id) }}">View</a></td>  </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No records found.</p>
+    {% endif %}
+</div>

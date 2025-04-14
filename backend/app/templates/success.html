@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booked Successfully</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .success-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .success-icon {
+            font-size: 48px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .btn-home {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="success-container">
+        <!-- Success Icon -->
+        <div class="success-icon">✓</div>
+
+        <!-- Success Message -->
+        <h2 class="mb-3">Appointment Booked Successfully!</h2>
+        <p class="text-muted">Your appointment has been confirmed. Thank you for choosing our service.</p>
+
+        <!-- Flash Messages (if any) -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Button to Return to Dashboard or Home -->
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-home">Return to Dashboard</a>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

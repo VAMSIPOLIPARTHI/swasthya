@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Patients</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .messages {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .messages p {
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .messages .error {
+            background-color: #ffe6e6;
+            color: #c0392b;
+            border: 1px solid #c0392b;
+        }
+
+        .messages .success {
+            background-color: #e6ffe6;
+            color: #27ae60;
+            border: 1px solid #27ae60;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        input[type="text"], input[type="password"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+            border-color: #2980b9;
+        }
+
+        button {
+            background-color: #e67e22;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            background-color: rgba(236, 240, 241, 0.8);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: translateY(-3px);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        .link-bar {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <h1>Manage Patients</h1>
+
+    <div class="messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <h2>Patient List</h2>
+    {% if patients %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>User ID</th>
+                    <th>Age</th>
+                    <th>Appointments</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in patients %}
+                    <tr>
+                        <td>{{ patient.id }}</td>
+                        <td>{{ patient.name }}</td>
+                        <td>{{ patient.user_id }}</td>
+                        <td>{{ patient.age }}</td>
+                        <td>
+                            {% if patient.appointments %}
+                                <ul>
+                                    {% for appt in patient.appointments %}
+                                        <li>Dr. {{ appt.doctor_name }} on {{ appt.date }} at {{ appt.time }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                No appointments
+                            {% endif %}
+                        </td>
+                        <td>
+                            <form method="POST" action="{{ url_for('manage_patients') }}">
+                                <input type="hidden" name="patient_id" value="{{ patient.id }}">
+                                <input type="hidden" name="action" value="remove">
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No patients found.</p>
+    {% endif %}
+
+    <h2>Add New Patient</h2>
+    <form method="POST" action="{{ url_for('manage_patients') }}">
+        <input type="text" name="new_name" placeholder="Name" required>
+        <input type="text" name="new_user_id" placeholder="User ID" required>
+        <input type="password" name="new_password" placeholder="Password" required>
+        <input type="number" name="new_age" placeholder="Age" required>
+        <input type="hidden" name="action" value="add">
+        <button type="submit">Add Patient</button>
+    </form>
+
+    <div class="link-bar">
+        <a href="{{ url_for('admin_dashboard') }}">Back to Admin Dashboard</a> |
+        <a href="{{ url_for('manage_doctors') }}">Manage Doctors</a> |
+        <a href="{{ url_for('logout_admin') }}">Logout</a>
+    </div>
+</body>
+</html>

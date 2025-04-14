@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reply to Lab Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lab-report-details p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            resize: vertical;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group textarea:focus {
+            border-color: #2980b9;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="container">
+        <h2>Reply to Lab Report</h2>
+
+        <!-- Display lab report details -->
+        <div class="lab-report-details">
+            <p><strong>Patient ID:</strong> {{ lab_report.patient_id }}</p>
+            <p><strong>File Path:</strong> {{ lab_report.file_path }}</p>
+            <p><strong>Uploaded At:</strong> {{ lab_report.uploaded_at }}</p>
+        </div>
+
+        <!-- Form for replying to the lab report -->
+        <form method="POST">
+            <div class="form-group">
+                <label for="reply_text">Your Reply:</label>
+                <textarea id="reply_text" name="reply_text" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Reply</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

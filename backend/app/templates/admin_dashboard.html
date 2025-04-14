@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDnt5_HP8vHYXGoPCkwXJ20K8jId2aFgjtw&s');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 80%;
+            margin: 100px auto 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            flex-grow: 1;
+        }
+
+        .navbar {
+            background-color: rgba(52, 152, 219, 0.7);
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar .title {
+            font-size: 24px;
+            font-weight: bold; /* Makes "Admin Dashboard" bold */
+            white-space: nowrap;
+            animation: moveText 10s linear infinite;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+
+        h1 {
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 20px 0;
+        }
+
+        .dashboard-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(26, 188, 156, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 0 10px;
+        }
+
+        .dashboard-link:hover {
+            background-color: rgba(22, 160, 133, 0.7);
+        }
+
+        .logout-link {
+            background-color: rgba(231, 76, 60, 0.7);
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        .logout-link:hover {
+            background-color: rgba(192, 57, 43, 0.7);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(52, 152, 219, 0.7);
+            color: white;
+            width: 100%;
+            border-radius: 0 0 5px 5px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="{{ url_for('admin_dashboard') }}">Home</a>
+            <span class="title">Admin Dashboard</span>
+        </div>
+        <div>
+            <a href="{{ url_for('logout_admin') }}" class="logout-link" onclick="return confirm('Are you sure you want to logout?');">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome, Admin</h1>
+        <ul>
+            <li>
+                <a href="{{ url_for('manage_doctors') }}" class="dashboard-link">
+                    <i class="fas fa-user-md"></i> Manage Doctors
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('manage_patients') }}" class="dashboard-link">
+                    <i class="fas fa-users"></i> Manage Patients
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        © 2023 Telemedicine App. All rights reserved.
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doctor Appointments</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: translateY(-3px);
+        }
+
+        .appointment-info {
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <h1>Appointments</h1>
+    {% if appointments %}
+        <ul>
+            {% for appointment in appointments %}
+                <li>
+                    <span class="appointment-info">Patient: {{ appointment.patient_name }} | Date: {{ appointment.date }} | Status: {{ appointment.status }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No appointments found.</p>
+    {% endif %}
+</body>
+</html>

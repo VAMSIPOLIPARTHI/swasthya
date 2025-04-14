@@ -1,0 +1,29 @@
+ID,name,password,specialization,rating,photo,symptom
+101,Dr. Hemnath,doc123,Cardiologist,4.8,images/22331A05D3.jpg,heart disease
+102,Dr. Lashya,102,Dermatologist,4.5,images/22331A05D4.jpg,rash
+103,Dr. Vamsi,103,Orthopedic,4.7,images/22331A05J2.jpg,joint pain
+104,Dr. Swamika,104,Pediatrician,4.6,images/22331A05J4.jpg,fever
+106,Dr. Ram,106,Oncologist,4.5,images/22331A05I0.jpg,lump
+107,Dr. Lali,107,ENT Specialist,4.4,images/22331A05F2.jpg,sore throat
+108,Dr. Sonali,108,Psychiatrist,4.6,images/22331A05G1.jpg,depression
+109,Dr. Roshitha,109,Endocrinologist,4.3,images/22331A05J0.jpg,thyroid problems
+110,Dr. Varenya,110,Nephrologist,4.5,images/22331A05E7.jpg,swelling
+111,Dr. Chaitu,111,Immunologist,4.7,images/22331A05E2.jpg,allergies
+112,Dr. Rupa,112,Geneticist,4.6,images/rupa.jpg,genetic conditions
+113,Dr. Keerthna,113,Anesthesiologist,4.5,images/keerthana.jpg,pain management
+114,Dr. Praveen,114,Hematologist,4.4,images/praveen.jpg,anemia
+115,Dr. Rohan,115,Ophthalmologist,4.8,images/22331A05F1.jpg,blurred vision
+116,Dr. Madav,116,Rheumatologist,4.6,images/22331A05H1.jpg,arthritis
+117,Dr. Rakesh,117,Allergist,4.3,images/22331A05I3.jpg,hives
+118,Dr. Pavan,118,Infectious Disease Specialist,4.5,images/22331A05H4.jpg,infections
+119,Dr. R. Pavan,119,Surgeon,4.7,images/22331A05J3.jpg,pre-surgery evaluation
+120,Dr. Vinay,120,Gastroenterologist,4.4,images/22331A05J1.jpg,abdominal pain
+121,Dr. Sravanthi,121,Geriatrician,4.6,images/22331A05G5.jpg,memory loss
+122,Dr. Harishini,122,Oncologist,4.5,images/22331A05I8.jpg,lump
+123,Dr. Narayana,123,Orthopedic Surgeon,4.7,images/22331A05D7.jpg,joint pain
+124,Dr. Hima,124,Pulmonologist,4.8,images/22331A05I2.jpg,cough
+125,Dr. Harshitha,125,Psychologist,4.4,images/22331A05I1.jpg,behavioral issues
+127,Dr. Anks,127,Radiologist,4.6,images/22331A05I7.jpg,imaging studies
+128,Dr. Revz,128,Urologist,4.7,images/22331A05I6.jpg,urinary problems
+13,Dr. Spark,129,Cardiologist,4.5,images/22331A05H0.jpg,heart disease
+105,Dr. Sasi,105,Neurologist,4.9,images/22331A05H2.jpg,headaches

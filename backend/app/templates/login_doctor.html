@@ -1,0 +1,96 @@
+<style>
+    body {
+        background-image: url('https://cdn.pixabay.com/photo/2021/04/10/11/53/telemedicine-6166814_1280.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .login-form {
+        width: 400px;
+        margin: 150px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form input[type="text"], .login-form input[type="password"] {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: transparent;
+        color: #000;
+        border: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .login-form input[type="text"]:focus, .login-form input[type="password"]:focus {
+        outline: none;
+        border-bottom: 2px solid #4CAF50;
+    }
+
+    .login-form label {
+        display: block;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .login-form button[type="submit"] {
+        width: 100%;
+        height: 40px;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .login-form button[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+
+    .animate-h1 {
+        animation: moveFromLeft 10s linear infinite;
+        white-space: nowrap;
+        color:black;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    @keyframes moveFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+</style>
+
+<img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+
+<h1 class="animate-h1">Doctors Login</h1>
+
+<div class="login-form">
+    <form method="POST" action="/login_doctor">
+        <label for="doctor_id">Doctor ID:</label>
+        <input type="text" id="doctor_id" name="doctor_id" required>
+
+        <label for="doctor_password">Password:</label>
+        <input type="password" id="doctor_password" name="doctor_password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>

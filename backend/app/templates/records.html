@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Records</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQEv-GiChK4qhlJQquVsG4d4Qli1vRtKSh_w&s');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        li {
+            background-color: rgba(236, 240, 241, 0.8);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: translateY(-3px);
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <h1>Patient Records</h1>
+    {% if records %}
+        <ul>
+            {% for record in records %}
+                <li>{{ record.patient_name }} - {{ record.diagnosis }} - {{ record.date }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No records found.</p>
+    {% endif %}
+</body>
+</html>

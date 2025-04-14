@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Your Records</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="container">
+        <h2>Your Records</h2>
+        {% if records|length > 0 %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Uploaded By (Doctor ID)</th>
+                        <th>Uploaded At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                        <tr>
+                            <td>{{ record.file_path.split('/')[-1] }}</td>
+                            <td>{{ record.uploaded_by }}</td>
+                            <td>{{ record.uploaded_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                            <td><a href="{{ url_for('download_record', record_id=record.id) }}">Download</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No records available.</p>
+        {% endif %}
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    </div>
+</body>
+</html>

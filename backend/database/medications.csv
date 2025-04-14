@@ -1,0 +1,100 @@
+Disease,Name,Dosage,Use,Photo
+Fever,Paracetamol,500mg,Reduces fever,https://example.com/medicine_1.png
+Fever,Aspirin,325mg,Reduces fever and pain,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Aspirin_tablets.jpg/320px-Aspirin_tablets.jpg
+Fever,Ibuprofen,400mg,Reduces fever and pain,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Headache,Paracetamol,500mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paracetamol_tablets.jpg/320px-Paracetamol_tablets.jpg
+Headache,Ibuprofen,400mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Headache,Aspirin,325mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Aspirin_tablets.jpg/320px-Aspirin_tablets.jpg
+Cold,Phenylephrine,10mg,Decongestant,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Phenylephrine_tablets.jpg/320px-Phenylephrine_tablets.jpg
+Cold,Paracetamol,500mg,Reduces fever and pain,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paracetamol_tablets.jpg/320px-Paracetamol_tablets.jpg
+Cold,Guaifenesin,200mg,Expectorant,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Guaifenesin_tablets.jpg/320px-Guaifenesin_tablets.jpg
+Cough,Dextromethorphan,15mg,Cough suppressant,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Dextromethorphan_syrup.jpg/320px-Dextromethorphan_syrup.jpg
+Cough,Guaifenesin,200mg,Expectorant,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Guaifenesin_tablets.jpg/320px-Guaifenesin_tablets.jpg
+Cough,Honey,1 tbsp,Cough soothing,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Honey_jar.jpg/320px-Honey_jar.jpg
+Sore Throat,Paracetamol,500mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paracetamol_tablets.jpg/320px-Paracetamol_tablets.jpg
+Sore Throat,Chloraseptic,10mg,Throat relief,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Chloraseptic_spray.jpg/320px-Chloraseptic_spray.jpg
+Sore Throat,Lozenges,10mg,Throat soothing,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Throat_lozenges.jpg/320px-Throat_lozenges.jpg
+Allergy,Cetirizine,10mg,Anti-allergy,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cetirizine_tablets.jpg/320px-Cetirizine_tablets.jpg
+Allergy,Loratadine,10mg,Antihistamine,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Loratadine_tablets.jpg/320px-Loratadine_tablets.jpg
+Allergy,Chlorpheniramine,4mg,Antihistamine,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chlorpheniramine_tablets.jpg/320px-Chlorpheniramine_tablets.jpg
+Nausea,Metoclopramide,10mg,Anti-emetic,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Metoclopramide_tablets.jpg/320px-Metoclopramide_tablets.jpg
+Nausea,Dimenhydrinate,50mg,Anti-emetic,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Dimenhydrinate_tablets.jpg/320px-Dimenhydrinate_tablets.jpg
+Nausea,Ginger,250mg,Anti-nausea,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ginger_root.jpg/320px-Ginger_root.jpg
+Diarrhea,Loperamide,2mg,Anti-diarrheal,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Loperamide_tablets.jpg/320px-Loperamide_tablets.jpg
+Diarrhea,Bismuth Subsalicylate,524mg,Anti-diarrheal,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bismuth_subsalicylate.jpg/320px-Bismuth_subsalicylate.jpg
+Diarrhea,Oral Rehydration Salts,1 packet,Hydration,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/ORS_packet.jpg/320px-ORS_packet.jpg
+Constipation,Lactulose,15ml,Laxative,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lactulose_syrup.jpg/320px-Lactulose_syrup.jpg
+Constipation,Bisacodyl,5mg,Laxative,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Bisacodyl_tablets.jpg/320px-Bisacodyl_tablets.jpg
+Constipation,Psyllium Husk,5g,Fiber supplement,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Psyllium_husk.jpg/320px-Psyllium_husk.jpg
+Acid Reflux,Omeprazole,20mg,Acid reducer,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Omeprazole_capsules.jpg/320px-Omeprazole_capsules.jpg
+Acid Reflux,Ranitidine,150mg,Acid reducer,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ranitidine_tablets.jpg/320px-Ranitidine_tablets.jpg
+Acid Reflux,Antacid,10ml,Neutralizes acid,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Antacid_tablets.jpg/320px-Antacid_tablets.jpg
+Heartburn,Omeprazole,20mg,Acid reducer,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Omeprazole_capsules.jpg/320px-Omeprazole_capsules.jpg
+Heartburn,Ranitidine,150mg,Acid reducer,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ranitidine_tablets.jpg/320px-Ranitidine_tablets.jpg
+Heartburn,Calcium Carbonate,500mg,Antacid,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Calcium_carbonate_tablets.jpg/320px-Calcium_carbonate_tablets.jpg
+Indigestion,Simethicone,80mg,Gas relief,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Simethicone_tablets.jpg/320px-Simethicone_tablets.jpg
+Indigestion,Pepto-Bismol,524mg,Stomach relief,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bismuth_subsalicylate.jpg/320px-Bismuth_subsalicylate.jpg
+Indigestion,Magnesium Hydroxide,400mg,Antacid,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Magnesium_hydroxide.jpg/320px-Magnesium_hydroxide.jpg
+Toothache,Clove Oil,100%,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Clove_oil.jpg/320px-Clove_oil.jpg
+Toothache,Ibuprofen,400mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Toothache,Benzocaine,20%,Topical anesthetic,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Benzocaine_gel.jpg/320px-Benzocaine_gel.jpg
+Minor Cuts,Neosporin,0.5g,Antibiotic ointment,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Neosporin_ointment.jpg/320px-Neosporin_ointment.jpg
+Minor Cuts,Hydrogen Peroxide,3%,Antiseptic,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hydrogen_peroxide.jpg/320px-Hydrogen_peroxide.jpg
+Minor Cuts,Band-Aid,1 unit,Wound protection,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Band_aid.jpg/320px-Band_aid.jpg
+Skin Irritation,Hydrocortisone,1%,Anti-inflammatory cream,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hydrocortisone_cream.jpg/320px-Hydrocortisone_cream.jpg
+Skin Irritation,Calamine,15%,Itch relief,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Calamine_lotion.jpg/320px-Calamine_lotion.jpg
+Skin Irritation,Aloe Vera,100%,Soothing gel,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Aloe_vera_gel.jpg/320px-Aloe_vera_gel.jpg
+Dry Skin,Petrolatum,100%,Moisturizer,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Petrolatum.jpg/320px-Petrolatum.jpg
+Dry Skin,Cetaphil,100%,Moisturizer,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cetaphil_cream.jpg/320px-Cetaphil_cream.jpg
+Dry Skin,Glycerin,100%,Hydration,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Glycerin.jpg/320px-Glycerin.jpg
+Sunburn,Aloe Vera,100%,Soothing gel,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Aloe_vera_gel.jpg/320px-Aloe_vera_gel.jpg
+Sunburn,Hydrocortisone,1%,Anti-inflammatory cream,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hydrocortisone_cream.jpg/320px-Hydrocortisone_cream.jpg
+Sunburn,Ibuprofen,400mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Insect Bites,Hydrocortisone,1%,Anti-inflammatory cream,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hydrocortisone_cream.jpg/320px-Hydrocortisone_cream.jpg
+Insect Bites,Antihistamine Cream,2%,Itch relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Antihistamine_cream.jpg/320px-Antihistamine_cream.jpg
+Insect Bites,Calamine,15%,Itch relief,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Calamine_lotion.jpg/320px-Calamine_lotion.jpg
+Muscle Pain,Ibuprofen,400mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Muscle Pain,Acetaminophen,500mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paracetamol_tablets.jpg/320px-Paracetamol_tablets.jpg
+Muscle Pain,Menthol,5%,Topical analgesic,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Menthol_cream.jpg/320px-Menthol_cream.jpg
+Joint Pain,Ibuprofen,400mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Joint Pain,Naproxen,250mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Naproxen_tablets.jpg/320px-Naproxen_tablets.jpg
+Joint Pain,Menthol,5%,Topical analgesic,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Menthol_cream.jpg/320px-Menthol_cream.jpg
+Stuffy Nose,Phenylephrine,10mg,Decongestant,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Phenylephrine_tablets.jpg/320px-Phenylephrine_tablets.jpg
+Stuffy Nose,Saline Spray,0.9%,Nasal hydration,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Saline_spray.jpg/320px-Saline_spray.jpg
+Stuffy Nose,Oxymetazoline,0.05%,Decongestant,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Oxymetazoline_spray.jpg/320px-Oxymetazoline_spray.jpg
+Earache,Ibuprofen,400mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ibuprofen_tablets.jpg/320px-Ibuprofen_tablets.jpg
+Earache,Acetaminophen,500mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paracetamol_tablets.jpg/320px-Paracetamol_tablets.jpg
+Earache,Olive Oil,1 drop,Ear soothing,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Olive_oil.jpg/320px-Olive_oil.jpg
+Mild Allergy,Fexofenadine,180mg,Antihistamine,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Fexofenadine_tablets.jpg/320px-Fexofenadine_tablets.jpg
+Mild Allergy,Diphenhydramine,25mg,Antihistamine,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Diphenhydramine_tablets.jpg/320px-Diphenhydramine_tablets.jpg
+Mild Allergy,Cetirizine,10mg,Anti-allergy,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cetirizine_tablets.jpg/320px-Cetirizine_tablets.jpg
+Hives,Loratadine,10mg,Antihistamine,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Loratadine_tablets.jpg/320px-Loratadine_tablets.jpg
+Hives,Hydrocortisone,1%,Anti-inflammatory cream,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hydrocortisone_cream.jpg/320px-Hydrocortisone_cream.jpg
+Hives,Calamine,15%,Itch relief,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Calamine_lotion.jpg/320px-Calamine_lotion.jpg
+Runny Nose,Phenylephrine,10mg,Decongestant,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Phenylephrine_tablets.jpg/320px-Phenylephrine_tablets.jpg
+Runny Nose,Antihistamine Syrup,5ml,Allergy relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Antihistamine_syrup.jpg/320px-Antihistamine_syrup.jpg
+Runny Nose,Saline Spray,0.9%,Nasal hydration,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Saline_spray.jpg/320px-Saline_spray.jpg
+Mouth Ulcer,Benzocaine,20%,Topical anesthetic,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Benzocaine_gel.jpg/320px-Benzocaine_gel.jpg
+Mouth Ulcer,Hydrogen Peroxide,3%,Antiseptic rinse,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hydrogen_peroxide.jpg/320px-Hydrogen_peroxide.jpg
+Mouth Ulcer,Salt Rinse,1 tsp,Soothes sores,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Salt.jpg/320px-Salt.jpg
+Dry Eyes,Artificial Tears,0.5%,Lubricant,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Artificial_tears.jpg/320px-Artificial_tears.jpg
+Dry Eyes,Hypromellose,0.3%,Eye hydration,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Hypromellose_drops.jpg/320px-Hypromellose_drops.jpg
+Dry Eyes,Saline Drops,0.9%,Moisturizer,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Saline_drops.jpg/320px-Saline_drops.jpg
+Minor Burn,Aloe Vera,100%,Soothing gel,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Aloe_vera_gel.jpg/320px-Aloe_vera_gel.jpg
+Minor Burn,Hydrocortisone,1%,Anti-inflammatory cream,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hydrocortisone_cream.jpg/320px-Hydrocortisone_cream.jpg
+Minor Burn,Silver Sulfadiazine,1%,Antibacterial cream,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Silver_sulfadiazine.jpg/320px-Silver_sulfadiazine.jpg
+Chapped Lips,Petrolatum,100%,Moisturizer,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Petrolatum.jpg/320px-Petrolatum.jpg
+Chapped Lips,Beeswax,100%,Lip balm,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Beeswax_balm.jpg/320px-Beeswax_balm.jpg
+Chapped Lips,Vitamin E,100%,Healing ointment,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Vitamin_e_ointment.jpg/320px-Vitamin_e_ointment.jpg
+Fatigue,Caffeine,100mg,Energy boost,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Caffeine_tablets.jpg/320px-Caffeine_tablets.jpg
+Fatigue,Vitamin B12,1000mcg,Energy supplement,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Vitamin_b12.jpg/320px-Vitamin_b12.jpg
+Fatigue,Iron,325mg,Energy support,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Iron_tablets.jpg/320px-Iron_tablets.jpg
+Bloating,Simethicone,80mg,Gas relief,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Simethicone_tablets.jpg/320px-Simethicone_tablets.jpg
+Bloating,Charcoal,250mg,Gas absorbent,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Charcoal_capsules.jpg/320px-Charcoal_capsules.jpg
+Bloating,Peppermint Oil,0.2ml,Antispasmodic,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Peppermint_oil.jpg/320px-Peppermint_oil.jpg
+Mild Headache,Naproxen,250mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Naproxen_tablets.jpg/320px-Naproxen_tablets.jpg
+Mild Headache,Caffeine,100mg,Pain enhancer,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Caffeine_tablets.jpg/320px-Caffeine_tablets.jpg
+Mild Headache,Acetaminophen,500mg,Pain relief,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paracetamol_tablets.jpg/320px-Paracetamol_tablets.jpg
+Dry Cough,Honey,1 tbsp,Cough soothing,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Honey_jar.jpg/320px-Honey_jar.jpg
+Dry Cough,Dextromethorphan,15mg,Cough suppressant,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Dextromethorphan_syrup.jpg/320px-Dextromethorphan_syrup.jpg
+Dry Cough,Lozenges,10mg,Throat soothing,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Throat_lozenges.jpg/320px-Throat_lozenges.jpg

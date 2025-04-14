@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Lab Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        select, input[type="file"] {
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+
+        select:focus, input[type="file"]:focus {
+            border-color: #2980b9;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+
+        .flash-messages p {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .flash-messages .danger {
+            background-color: #e74c3c;
+        }
+
+        .flash-messages .success {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+-body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="container">
+        <h1>Upload Lab Report</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <p class="{{ category }}">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <form method="POST" enctype="multipart/form-data">
+            <label for="doctor_id">Select Doctor:</label>
+            <select name="doctor_id" id="doctor_id" required>
+                <option value="">-- Select a Doctor --</option>
+                {% for doctor in doctors %}
+                    <option value="{{ doctor.id }}">{{ doctor.name }} ({{ doctor.specialization }})</option>
+                {% endfor %}
+            </select>
+            <label for="lab_report_file">Upload Lab Report:</label>
+            <input type="file" name="lab_report_file" id="lab_report_file" required>
+            <button type="submit">Upload</button>
+        </form>
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarize Records</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        h3 {
+            color: #2980b9;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <div class="container">
+        <h2>Upload Medical Record</h2>
+        <form action="/summarize" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Summarize</button>
+        </form>
+        {% if summary %}
+            <h3>Summary:</h3>
+            <p>{{ summary }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

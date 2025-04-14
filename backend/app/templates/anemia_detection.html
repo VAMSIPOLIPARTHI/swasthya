@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anemia Detection - Telemedicine</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* Set the downloaded image as background with fallback */
+            background-image: url("{{ url_for('static', filename='images/blood.jpg') }}");
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent tiling */
+            background-attachment: fixed; /* Keep it fixed while scrolling */
+            background-color: #f0f0f0; /* Fallback color if image fails to load */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh; /* Ensure it covers the full viewport height */
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            margin-bottom: 50px; /* Add bottom margin for spacing */
+        }
+        /* Overlay to improve text readability */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.85); /* Slightly more opaque white for readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 10px;
+            background-color: #ffffff; /* Solid white background for cards */
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .result-section {
+            margin-top: 20px;
+        }
+        .alert {
+            margin-top: 20px;
+        }
+        h1, h3 {
+            color: #333; /* Darker text for contrast */
+        }
+        p, label {
+            color: #444; /* Slightly lighter text for readability */
+        }
+        .text-muted small {
+            color: #666 !important; /* Ensure the disclaimer text is readable */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <h1 class="text-center mb-4">Anemia Detection</h1>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <!-- Upload Form -->
+            <div class="card p-4">
+                <h3 class="card-title text-center">Upload Image for Analysis</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Select an Image (PNG, JPG, JPEG):</label>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg, image/jpg" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Analyze</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            {% if result %}
+                <div class="card result-section p-4">
+                    <h3 class="card-title text-center">Analysis Results</h3>
+                    <div class="text-center">
+                        <p><strong>Result:</strong> {{ result }}</p>
+                        <p><strong>Estimated Hemoglobin Level:</strong> {{ hb_level }} g/dL</p>
+                        <p><strong>Probability of Anemia:</strong> {{ probability|round(2) }}</p>
+                        <p class="text-muted">
+                            <small>Note: Normal hemoglobin ranges are typically 12-16 g/dL for women and 13-17 g/dL for men. This is an AI-based estimation and not a substitute for professional medical advice.</small>
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (for alerts dismissal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Swasthaya TeleHealth</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: black; /* Black background */
+            color: white; /* White text for contrast */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #212121; /* Darker header for better contrast */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* White text shadow */
+            background: linear-gradient(90deg, #3498db, #8e44ad); /* Gradient text */
+            
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Circular shape */
+            object-fit: cover;
+            border: 4px solid #3498db; /* Blue border */
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* Blue button background */
+            color: white; /* White text */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #333; /* Darker sections */
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1); /* White shadow */
+            transition: transform 0.2s ease; /* Add a transform transition */
+        }
+
+        section:hover {
+            transform: translateY(-5px); /* Move section up slightly on hover */
+        }
+
+        section img {
+            width: 50%;
+            float: left;
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2); /* White Image shadow */
+        }
+
+        section h2 {
+            color: white; /* Light blue heading */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        section h3 {
+            color: #8e44ad; /* Purple heading */
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #bdbdbd; /* Lighter list text */
+        }
+
+        ul li strong {
+            color: whitesmoke; /* Light blue for strong elements */
+        }
+
+        footer {
+            background-color: #212121; /* Darker footer */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav ul li a {
+                width: 100%;
+                text-align: center;
+            }
+
+            section {
+                width: 90%;
+                padding: 20px;
+            }
+
+            section img {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+        <h1>Swasthaya TeleHealth</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Swasthaya TeleHealth</h2>
+            <img src="https://www.apollotelehealth.com/wp-content/uploads/2020/02/atnf-over-view.png" alt="Swasthaya TeleHealth Overview">
+            <p>With Swasthaya TeleHealth, we are leading the way in multi-specialty telemedicine in South Asia, providing accessible healthcare services to all.</p>
+            <h3>Our Core Values</h3>
+            <ul>
+                <li><strong>Empathy:</strong> Showing care and understanding to all.</li>
+                <li><strong>Integrity:</strong> Upholding honesty, ethics, and transparency.</li>
+                <li><strong>Responsibility:</strong> Building trust through community sensitivity.</li>
+                <li><strong>Unity:</strong> Collaborating globally across all teams.</li>
+                <li><strong>Pioneering:</strong> Continuously innovating for excellence.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swasthaya TeleHealth. All rights reserved.</p>
+    </footer>
+</body>
+</html>

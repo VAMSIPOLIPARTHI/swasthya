@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 20px auto;
+        }
+
+        .no-photo {
+            color: #ff4500;
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/Swasthya logo with a catchy tagline.png') }}" alt="Swasthya Logo" class="logo">
+    <h2>Profile of Dr. {{ doctor['name'] }}</h2>
+    <p>Specialization: {{ doctor['specialization'] }}</p>
+    
+    {% if doctor['photo'] %}
+        <img src="{{ url_for('static', filename=doctor['photo']) }}" alt="Doctor's Photo" class="profile-photo">
+    {% else %}
+        <p class="no-photo">No photo available</p>
+    {% endif %}
+
+    <a href="{{ url_for('doctor_dashboard') }}" class="back-link">🔙 Back to Dashboard</a>
+</body>
+</html>
