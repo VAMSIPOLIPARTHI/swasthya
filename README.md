@@ -2,8 +2,8 @@
 
 A Flask-based telemedicine platform that connects patients, doctors, and administrators, making healthcare more accessible, affordable, and AI-driven. The system integrates appointment booking, medical report management, AI-powered anemia detection, and NLP-based report summarization to deliver smarter healthcare services.
 
-🚀 Features
-👨‍⚕️ Patients
+🚀** Features**
+👨‍⚕️ **Patients**
 
 Secure signup/login (with password hashing using Flask-Bcrypt).
 
@@ -17,7 +17,7 @@ Get AI-powered anemia detection from blood smear images.
 
 Access AI-based medical report summarization for easy understanding.
 
-👩‍⚕️ Doctors
+👩‍⚕️ **Doctors**
 
 Manage profiles with images and contact info.
 
@@ -27,19 +27,19 @@ Access and update patient records.
 
 Manage appointments.
 
-🛠️ Admin
+🛠️** Admin**
 
 Add, update, or remove doctors.
 
 Monitor patients, appointments, and reports.
 
-🤖 AI Integrations
+🤖 **AI Integrations**
 
 Anemia Detection → TensorFlow CNN model for blood smear analysis.
 
 Medical Report Summarization → NLP with Hugging Face T5 Transformer.
-
-🗄️ Data Management
+**
+🗄️ **Data Management****
 
 Database → SQLite for patients, appointments, and medical records.
 
@@ -47,38 +47,23 @@ Doctors & Medications → Managed using CSV files.
 
 Lab Reports → Uploaded files stored securely, retrievable anytime.
 
-🛠️ Tech Stack
+**🛠️ Tech Stack**
 
-Backend: Flask, FastAPI (for AI services)
+**Backend**: Flask, FastAPI (for AI services)
 
-Database: SQLite + CSV-based doctor/medicine data
+**Database**: SQLite + CSV-based doctor/medicine data
 
-Frontend: HTML, CSS, JavaScript, Jinja2
+**Frontend**: HTML, CSS, JavaScript, Jinja2
 
-Security: Flask-Bcrypt (password hashing), Flask-Session
+**Security**: Flask-Bcrypt (password hashing), Flask-Session
 
-AI/ML: TensorFlow, Hugging Face Transformers (T5), XGBoost
+**AI/ML**: TensorFlow, Hugging Face Transformers (T5), XGBoost
 
-Data Handling: Pandas, NumPy
+**Data Handling:** Pandas, NumPy
 
-Image Processing: Pillow (PIL)
+**Image Processing**: Pillow (PIL)
 
-📂 Project Structure
-telemedicine/
-│── backend/
-│   ├── app/
-│   │   ├── models.py
-│   │   ├── routes.py
-│   │   ├── ai/
-│   │   │   ├── anemia_model.h5
-│   │   │   └── summarizer.py
-│   ├── static/        # CSS, JS, images
-│   ├── templates/     # HTML pages
-│   ├── database.db    # SQLite database
-│── frontend/          # (Optional separate folder if needed)
-│── README.md
-
-⚡ Installation & Setup
+⚡ **Installation & Setup**
 
 Clone the repo
 
@@ -105,8 +90,8 @@ flask run
 
 Open in browser → http://127.0.0.1:5000/
 
-📌 Future Enhancements
-
+📌 **Future Enhancements
+**
 Add real-time video consultations with WebRTC.
 
 Support for multiple languages in the patient dashboard.
