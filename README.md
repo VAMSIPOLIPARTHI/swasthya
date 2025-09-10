@@ -183,7 +183,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   
 ### 🌟 **Made with ❤️ for Healthcare Innovation**
 
-**[⭐ Star this repo]([https://github.com/your-username/telemedicine](https://github.com/VAMSIPOLIPARTHI/swasthya))** • **[🍴 Fork]([https://github.com/your-username/telemedicine/fork](https://github.com/VAMSIPOLIPARTHI/swasthya))** • **[📝 Issues](https://github.com/your-username/telemedicine/issues)**
+**[⭐ Star this repo]([https://github.com/your-username/telemedicine](https://github.com/VAMSIPOLIPARTHI/swasthya))** 
+
 
 </div>
 
