@@ -1,0 +1,7 @@
+ flask
+Flask-Bcrypt
+panda
+pillow
+numpy
+tensorflow
+transformers
